@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    image: 'intern-assignment:latest'
+    build:
+      context: .
+    container_name: InternAssignmentApplication
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/user_db
+
+
+  db:
+    image: 'postgres:14beta2-alpine'
+    container_name: db
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=user_db
+
