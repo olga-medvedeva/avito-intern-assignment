@@ -58,7 +58,7 @@ public class UserService {
     public User withdraw(Long id, BigDecimal amount, String comment) {
         User user = findUserById(id);
         BigDecimal userAmount = user.getAmount();
-        if (userAmount.compareTo(amount) <= 0) {
+        if (userAmount.compareTo(amount) < 0) {
             throw new NotEnoughMoneyException("User by id " + id + " doesn't have enough money");
         }
         user.setAmount(userAmount.subtract(amount));
@@ -80,7 +80,7 @@ public class UserService {
             userToDeposit = new User(idToDeposit);
         }
         BigDecimal userToDepositAmount = userToDeposit.getAmount();
-        if (userToWithdrawAmount.compareTo(amount) <= 0) {
+        if (userToWithdrawAmount.compareTo(amount) < 0) {
             throw new NotEnoughMoneyException("User by id " + idToWithdraw + " doesn't have enough money");
         }
         userToWithdraw.setAmount(userToWithdrawAmount.subtract(amount));
