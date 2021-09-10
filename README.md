@@ -33,3 +33,22 @@ successful transaction will be availible in DB.
 
 Both services (userService and currencyService) have unit tests as well as userController (+ int tests).
 
+I tested program in Postman.    
+Deposit:
+[POST] http://localhost:8080/user/deposit
+RequestBody
+{
+    "userId" : 1,
+    "amount" : 500
+}
+    
+[POST] http://localhost:8080/user/deposit
+RequestBody
+{
+    "userId" : 5,
+    "amount" : 3000
+}
+
+Check:
+[GET] http://localhost:8080/user/5/check?currency=USD
+
