@@ -33,50 +33,50 @@ successful transaction will be availible in DB.
 
 Both services (userService and currencyService) have unit tests as well as userController (+ int tests).
 
-I tested program in Postman.    
-Deposit:
-[POST] http://localhost:8080/user/deposit
+I tested program in Postman.  
+Deposit:  
+[POST] http://localhost:8080/user/deposit  
 RequestBody
-{
-    "userId" : 1,
-    "amount" : 500
-}
+{  
+    "userId" : 1,  
+    "amount" : 500  
+}  
 
-![1](https://user-images.githubusercontent.com/90202470/132867366-418ab35e-b303-4071-9cb3-11e0451a82e2.png)
+![1](https://user-images.githubusercontent.com/90202470/132867366-418ab35e-b303-4071-9cb3-11e0451a82e2.png)  
 
     
-[POST] http://localhost:8080/user/deposit
-RequestBody
+[POST] http://localhost:8080/user/deposit  
+RequestBody  
 {
-    "userId" : 5,
-    "amount" : 3000
-}
+    "userId" : 5,  
+    "amount" : 3000  
+}  
 
-![2](https://user-images.githubusercontent.com/90202470/132867494-c175a0a7-999a-4c95-aab1-d6b548fb9d7c.png)
+![2](https://user-images.githubusercontent.com/90202470/132867494-c175a0a7-999a-4c95-aab1-d6b548fb9d7c.png)  
 
-Check:
-[GET] http://localhost:8080/user/5/check?currency=USD
+Check:  
+[GET] http://localhost:8080/user/5/check?currency=USD  
 
-![3](https://user-images.githubusercontent.com/90202470/132867615-d65e5055-a4db-4742-8064-3cc1c5a718bc.png)
+![3](https://user-images.githubusercontent.com/90202470/132867615-d65e5055-a4db-4742-8064-3cc1c5a718bc.png)  
 
-Withdraw:
-[POST] http://localhost:8080/user/withdraw
-RequestBody
-{
-    "userId" : 5,
-    "amount" : 1350.50
-}
+Withdraw:  
+[POST] http://localhost:8080/user/withdraw  
+RequestBody  
+{  
+    "userId" : 5,  
+    "amount" : 1350.50  
+}  
 
-![4](https://user-images.githubusercontent.com/90202470/132867750-146b86fd-66c0-408a-90f3-2e5a1b0a75cb.png)
+![4](https://user-images.githubusercontent.com/90202470/132867750-146b86fd-66c0-408a-90f3-2e5a1b0a75cb.png)  
 
-Transfer:
-[POST] http://localhost:8080/user/transfer
-RequestBody
-{
-    "idToWithdraw" : 1,
-    "idToDeposit" : 3,
-    "amount" : 246
-}
+Transfer:  
+[POST] http://localhost:8080/user/transfer  
+RequestBody  
+{  
+    "idToWithdraw" : 1,  
+    "idToDeposit" : 3,  
+    "amount" : 246  
+}  
 
 ![5](https://user-images.githubusercontent.com/90202470/132868144-096e3a90-b1ed-4bc0-b00b-52b65512683e.png)
 
