@@ -47,7 +47,7 @@ RequestBody
     
 [POST] http://localhost:8080/user/deposit  
 RequestBody  
-{
+{  
     "userId" : 5,  
     "amount" : 3000  
 }  
