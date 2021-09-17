@@ -16,7 +16,7 @@ Service has 4 functions:
 - Check [GET]:
   Takes id parameter and not required currency code.
   (Service has data base with currecy codes and their value which updates every hour from https://exchangeratesapi.io/ api)
-  If currecy code is given, then serviсу converts RUB into the specified currency and returns result in BigDecimal format (if currency is not given, service  just returns the result from DB);
+  If currecy code is given, then serviсe converts RUB into specified currency and returns result in BigDecimal format (if currency is not given, service just returns the result from DB);
   
 - Deposit [POST]:
   Takes changeRequest object (userId, amount and comment (userId and amount have validation, comment not required)), if user with specified id isn't found, service creates new user with that id, deposit him specified amount and saves his into DB.
